@@ -81,11 +81,11 @@ GameManager.prototype.addRandomTile = function (isStart) {
   			return;
   		}
   		var cell2 = this.grid.availableContentCell(2);
-  		var cell4 = this.grid.availableContentCell(4);
+  		var cell4 = this.grid.availableContentCell(8);
   		if (cell2.x === -1 && cell4.x === -1) {
   			this.addRandomTileHelper(0.5, 1);
   		} else if (cell2.x === -1) {
-  			var tile = new Tile(cell4, 4);
+  			var tile = new Tile(cell4, 8);
   			this.grid.insertTile(tile);
   		} else if (cell4.x === -1) {
   			var tile = new Tile(cell2, 2);
@@ -96,7 +96,7 @@ GameManager.prototype.addRandomTile = function (isStart) {
   				var tile = new Tile(cell2, 2);
   				this.grid.insertTile(tile);
   			} else {
-  				var tile = new Tile(cell4, 4);
+  				var tile = new Tile(cell4, 8);
   				this.grid.insertTile(tile);
   			}
   		}
@@ -299,8 +299,8 @@ GameManager.prototype.move = function (direction) {
           // Update the score
           self.score += merged.value;
 
-          // The mighty 4096 tile
-          if (merged.value === 4096) self.won = true;
+          // The mighty 8192 tile
+          if (merged.value === 8192) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
