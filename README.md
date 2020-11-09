@@ -13,7 +13,7 @@ I make it easy to play!! Change generating small block role
 Changes and improvements are more than welcome! 
 
 ## Step Squad
-Step Squad Ready for action
+The Super Special Secret Squad is here
 
 ## License
 Step Squad is licensed under the [GPL license.](https://github.com/chillyc/4096/LICENSE)        
