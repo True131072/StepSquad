@@ -182,7 +182,7 @@ HTMLActuator.prototype.updateScore = function (score) {
   var difference = score - this.score;
   this.score = score;
 
-  this.scoreContainer.textContent = this.score + " GeV";
+  this.scoreContainer.textContent = this.score;
 
   if (difference > 0) {
     var addition = document.createElement("div");
@@ -194,7 +194,7 @@ HTMLActuator.prototype.updateScore = function (score) {
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {
-  this.bestContainer.textContent = bestScore + " GeV";
+  this.bestContainer.textContent = bestScore;
 };
 
 HTMLActuator.prototype.message = function (won) {
